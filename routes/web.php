@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PhoneController;
 
 Route::get('/', function () {
     return view('welcome'); // "../resources/views/welcome.blade.php"
@@ -83,3 +84,6 @@ Route::get('destroy/{post_id}', [PostController::class, 'destroy']);
 /************************ ELOQUENT RELATIONSHIPS  *******************/
 // One to One
 Route::get('/user/{user_id}/show', [UserController::class, 'show']);
+
+// One to One (inverse)
+Route::get('/phone/{phone_id}/show', [PhoneController::class, 'showUserInfo']);
