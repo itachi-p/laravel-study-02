@@ -9,6 +9,14 @@ class Post extends Model
 {
     use HasFactory;
 
-    // Allow math assignment
     protected $fillable = ['title', 'content'];
+
+
+    # One to Many (inverse)
+    # Post belongs to a user
+    # To get the owner or the info of the owner of a post
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

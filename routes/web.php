@@ -87,3 +87,6 @@ Route::get('/user/{user_id}/show', [UserController::class, 'show']);
 
 // One to One (inverse)
 Route::get('/phone/{phone_id}/show', [PhoneController::class, 'showUserInfo']);
+
+// One to Many (inverse)
+Route::get('/post/{post_id}/show', [PostController::class, 'show']);

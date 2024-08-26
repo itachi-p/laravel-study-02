@@ -14,6 +14,11 @@ class PostController extends Controller
         $this->post = $post;
     }
 
+    // public function index()
+    // {
+    //     return "Post controller: index method";
+    // }
+
     public function viewPost($post_id)
     {
         return "Post Controller: This is Post ID: $post_id";
@@ -24,38 +29,21 @@ class PostController extends Controller
     //     return "Post #$post_id: This is the post of $username.";
     // }
 
-    # Act 2
+    # Act 1
     // public function show($username)
     // {
-    //     $username = ucfirst($username);
-    //     $post_titles = [
-    //         'How to make French Toast',
-    //         'Japanese Cheesecake Recipe',
-    //         'How To Cook Steak',
-    //         'The Best Prices in Tokyo for Shoku-pan Bread',
-    //         'Cambodian Style Fried Chicken Wings'
-    //     ];
-
-    //     $sns_links = [
-    //         "facebook",
-    //         "instagram",
-    //         "twitter"
-    //     ];
-
-    //     return view('show')
-    //             ->with('username', $username)
-    //             ->with('post_titles', $post_titles)
-    //             ->with('sns_links', $sns_links);
+    //     return "Hello " . strtoupper($username) . "!";
     // }
+
 
     # Using View
     public function viewAllPosts()
     {
         $post_titles = [
-            // 'Python vs Java',
-            // 'The Cloud',
-            // 'How To Stay Productive',
-            // 'Coding during pandemic'
+            'Python vs Java',
+            'The Cloud',
+            'How To Stay Productive',
+            'Coding during pandemic'
         ];
 
         return view('view-all')
@@ -71,6 +59,24 @@ class PostController extends Controller
             ->with('key_post_id', $post_id)
             ->with('key_username', $username);
     }
+
+
+    # Act2
+    // public function show($username)
+    // {
+    //     $post_titles = [
+    //         'How to Make French Toast',
+    //         'Japanese Cheesecake Recipe',
+    //         'How to Cook Steak',
+    //         'The Best Places in Tokyo for Shoku-pan Bread',
+    //         'Cambodian Style Fried Chicken Wings'
+    //     ];
+
+    //     return view('show')
+    //     ->with('post_titles', $post_titles)
+    //     ->with('username', ucwords($username));
+    // }
+
 
     /**************** ELOQUENT *****************/
 
@@ -103,6 +109,7 @@ class PostController extends Controller
         return "created!";
     }
 
+
     # READ (all)
     public function index()
     {
@@ -120,18 +127,19 @@ class PostController extends Controller
     }
 
     # READ (find)
-    public function show($post_id)
-    {
-        // $post_m = new Post;
-        // eloquent find() - retrieves a single record by its primary key.
-        // eloquent findOrFail() - does the same but will throw a NotFoundException if no result is found.
-        $post = $this->post->findOrFail($post_id);
-        // $post holds now the record of the retrieved post.
+    // public function show($post_id)
+    // {
+    //     $post_m = new Post;
+    //     eloquent find() - retrieves a single record by its primary key.
+    //     eloquent findOrFail() - does the same but will throw a NotFoundException if no result is found.
+    //     $post = $this->post->findOrFail($post_id);
+    //     $post holds now the record of the retrieved post.
 
-        echo "ID: " . $post->id . "<br>";
-        echo "Title: " . $post->title . "<br>";
-        echo $post->content;
-    }
+    //     echo "ID: " . $post->id . "<br>";
+    //     echo "Title: " . $post->title . "<br>";
+    //     echo $post->content;
+    // }
+
 
     # READ (where)
     public function showWhere($post_id)
@@ -197,5 +205,15 @@ class PostController extends Controller
         $this->post->destroy($post_id);
 
         return "Destroyed Successfully!";
+    }
+
+
+    // One to Many
+    public function show($post_id)
+    {
+        $post = $this->post->findOrFail($post_id);
+
+        return view('posts.show')
+            ->with('post', $post);
     }
 }
