@@ -1,12 +1,12 @@
-# laravel_study_02
+# laravel_study_02 (2024/8/26~)
 
-セブ島スクールの学習用コード。
+セブ島スクールの学習用コード。(8月中旬に書いていたコードの続き)
 
 これまで念の為とアップロードを避けてきたが、一部を除いて問題なさげなのでRust製の新ターミナルWarpに慣れついでにバックアップを取ることにした。
 
 - むしろ今後積極的に `rebase` 及び `merge`コマンドを使っていき、両者の違いをある程度深く理解＆慣れておく。
   - 今まで独習＆個人開発だとほぼ以下の一連の流れしか必要なかったが、それだと実務で困る（たぶん）。
-    - git init | -m commit (& remote) | -u push
+    - `git init | commit -m (& remote) | push -u`
   - 他にも `reset`, `revert`, `soft`, `hard`, `HEAD^`とかいろいろあるが、**「Gitに関しては次はrebaseについて理解する」** を最優先にする。
     - たぶん上記も`rebase`について調べるうちに副次的に理解することになる。（もしかしたら前提条件かもしれない。）
 
@@ -15,10 +15,10 @@
 - マウス🐀？なんだそれ、うまいのか？
   - 極力キーボード、それもホームポジションから指を離さない。
   - カーソルキー移動も極力やらない。
-    - 僕たちにはVimのモーションとhjklキーさえあれば充分だ。なぁ、そうだろマイケル？
-- Macbook標準ターミナルやiTerm2の使用も止めRust製のWarpを使うが、そこでもテキスト編集は全てVimで行う。
+    - 僕たちにはVimのモーションとhjklキーがあれば充分だ。なぁそうだろマイケル？
+- Macbook標準ターミナルやiTermもWarpに置き換え、そこでも全てVimを使う。
 
-```
+```txt
 「なんでもできるマルチプレーヤーを目指そうとするな。一芸を磨け。」
 
 ~ どっかの誰かの名言 ~
@@ -26,7 +26,7 @@
 
 (参考) [Qiita - Gitのcommitメッセージにつけるべき接頭辞一覧](https://qiita.com/muranakar/items/20a7927ffa63a5ca226a)
 
-<hr>
+---
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
