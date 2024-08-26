@@ -1,5 +1,7 @@
 # laravel_study_02
-セブ島スクールの学習用コード。<br>
+
+セブ島スクールの学習用コード。
+
 これまで念の為とアップロードを避けてきたが、一部を除いて問題なさげなのでRust製の新ターミナルWarpに慣れついでにバックアップを取ることにした。
 
 - むしろ今後積極的に `rebase` 及び `merge`コマンドを使っていき、両者の違いをある程度深く理解＆慣れておく。
@@ -8,22 +10,23 @@
   - 他にも `reset`, `revert`, `soft`, `hard`, `HEAD^`とかいろいろあるが、**「Gitに関しては次はrebaseについて理解する」** を最優先にする。
     - たぶん上記も`rebase`について調べるうちに副次的に理解することになる。（もしかしたら前提条件かもしれない。）
 
-<h2>VSCodeはあくまでもVimキーバインドで。</h2>
+## VSCodeはあくまでもVimキーバインドで
 
 - マウス🐀？なんだそれ、うまいのか？
   - 極力キーボード、それもホームポジションから指を離さない。
   - カーソルキー移動も極力やらない。
     - 僕たちにはVimのモーションとhjklキーさえあれば充分だ。なぁ、そうだろマイケル？
-- Macbook標準のターミナルやiTerm2の使用もやめてRust製のWarpを使うが、そこでもテキスト編集は全てVimで行う。
+- Macbook標準ターミナルやiTerm2の使用も止めRust製のWarpを使うが、そこでもテキスト編集は全てVimで行う。
 
-
+```
 「なんでもできるマルチプレーヤーを目指そうとするな。一芸を磨け。」
- - どっかの誰かの名言 -
+
+~ どっかの誰かの名言 ~
+```
+
+(参考) [Qiita - Gitのcommitメッセージにつけるべき接頭辞一覧](https://qiita.com/muranakar/items/20a7927ffa63a5ca226a)
 
 <hr>
-
-[Qiita - Gitのcommitメッセージにつけるべき接頭辞一覧](https://qiita.com/muranakar/items/20a7927ffa63a5ca226a)
-
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
@@ -33,7 +36,6 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
-
 
 ## About Laravel
 

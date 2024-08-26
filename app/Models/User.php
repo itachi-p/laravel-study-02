@@ -44,4 +44,13 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    # One to One
+    # User has one phone number
+    # To get the phone number of a user
+    public function phoneNumber() // Method names can be arbitrary
+    // public function phoneNumber()
+    {
+        return $this->hasOne(phone::class);
+    }
 }

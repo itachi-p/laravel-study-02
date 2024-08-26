@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('welcome'); // "../resources/views/welcome.blade.php"
@@ -77,3 +78,8 @@ Route::get('/update/{post_id}', [PostController::class, 'update']);
 # DELETE
 Route::get('/delete/{post_id}', [PostController::class, "delete"]);
 Route::get('destroy/{post_id}', [PostController::class, 'destroy']);
+
+
+/************************ ELOQUENT RELATIONSHIPS  *******************/
+// One to One
+Route::get('/user/{user_id}/show', [UserController::class, 'show']);
