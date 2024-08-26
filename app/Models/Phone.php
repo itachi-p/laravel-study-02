@@ -12,7 +12,8 @@ class Phone extends Model
     # One to One (inverse) Phone Model -> User Model
     # Phone belongs to a user
     # To get the info of the owner/user of the phone number
-    public function user()
+    public function user() // この名前(アクセスしたいモデルと同名)以外では不可の模様。
+    // Userモデルからの外部キーアクセスではメソッド名は任意だったが、逆は仕様的に名称固定っぽい。
     {
         return $this->belongsTo(User::class);
     }
