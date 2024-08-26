@@ -82,7 +82,7 @@ Route::get('destroy/{post_id}', [PostController::class, 'destroy']);
 
 
 /************************ ELOQUENT RELATIONSHIPS  *******************/
-// One to One
+// One to One & One to Many
 Route::get('/user/{user_id}/show', [UserController::class, 'show']);
 
 // One to One (inverse)

@@ -50,8 +50,16 @@ class User extends Authenticatable
     # To get the phone number of a user
 
     // public function phone()
-    public function getPhoneNumber() // Method names can be arbitrary
+    public function phone() // Method names can be arbitrary
     {
         return $this->hasOne(Phone::class);
+    }
+
+    # One to Many
+    # User has many posts
+    # To get all the posts of a user
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
     }
 }
