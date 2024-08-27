@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Show post')
+@section('title', 'Show one Post')
 
 @section('content')
-    {{ $post }}
+    <h1>{{ $post->title }}</h1>
+    <p class="text-muted">Post ID: {{ $post->id }}</p>
+    <p class="text-muted">Owner: {{ $post->user->name }}</p>
+    <p class="lead">{{ $post->content }}</p>
 @endsection

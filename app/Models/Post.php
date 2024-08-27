@@ -15,7 +15,7 @@ class Post extends Model
     # One to Many (inverse)
     # Post belongs to a user
     # To get the owner or the info of the owner of a post
-    public function user()
+    public function user() // このメソッド名も元のモデル名と同名で固定っぽい
     {
         return $this->belongsTo(User::class);
     }
